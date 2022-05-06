@@ -20,12 +20,12 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Order createOrder(Order order) {
-        return orderRepository.save(order);
+    public void createOrder(Order order) {
+        orderRepository.save(order);
     }
 
     @Override
-    public List<Order> searchAllOrdersByDate(Date date) {
-        return orderRepository.findAll().stream().filter(e -> e.getDate().equals(date)).collect(Collectors.toList());
+    public List<Order> searchAllOrdersByDate(String date) {
+        return orderRepository.findAll().stream().filter(e -> e.getDate().equals(Date.valueOf(date))).collect(Collectors.toList());
     }
 }

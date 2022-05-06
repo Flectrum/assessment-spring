@@ -35,8 +35,8 @@ class OrderServiceImplTest {
     @Test
     void searchAllOrdersByDate() {
         Order order = new Order();
-        Date date = Date.valueOf("2015-03-31");
-        order.setDate(date);
+        String date = "2015-03-31";
+        order.setDate(Date.valueOf(date));
         List<Order> orderList = new ArrayList<>();
         orderList.add(order);
 
