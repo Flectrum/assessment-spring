@@ -6,6 +6,8 @@ import com.berdnikov.assessmentspring.service.CustomerService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
@@ -15,8 +17,17 @@ public class CustomerServiceImpl implements CustomerService {
         this.customerRepository = customerRepository;
     }
 
+
+
     @Override
-    public Customer createCustomer(Customer customer) {
-        return customerRepository.save(customer);
+    public void createCustomer(Customer customer) {
+        customerRepository.save(customer);
     }
+
+    @Override
+    public List<Customer> getAllCustomers() {
+        return customerRepository.findAll();
+    }
+
+
 }
