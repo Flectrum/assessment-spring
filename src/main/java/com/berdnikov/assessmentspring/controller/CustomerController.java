@@ -1,13 +1,9 @@
 package com.berdnikov.assessmentspring.controller;
 
 import com.berdnikov.assessmentspring.model.Customer;
-import com.berdnikov.assessmentspring.repository.CustomerRepository;
 import com.berdnikov.assessmentspring.service.impl.CustomerServiceImpl;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.http.HttpHeaders;
 import java.util.List;
 
 @RestController
