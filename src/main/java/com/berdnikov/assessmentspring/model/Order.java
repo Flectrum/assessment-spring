@@ -17,6 +17,8 @@ public class Order {
     private Set<OrderLine> orderLine = new HashSet<>();
     @Timestamp
     private Date date;
+    @ManyToOne
+    private Customer customer;
 
     public Order(Set<OrderLine> orderLine, Date date) {
         this.orderLine = orderLine;
@@ -27,6 +29,13 @@ public class Order {
     }
 
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 
     public Long getId() {
         return id;

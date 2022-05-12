@@ -1,6 +1,7 @@
 package com.berdnikov.assessmentspring.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "customer")
@@ -12,6 +13,8 @@ public class Customer {
     private String fullName;
     private String email;
     private String telephone;
+    @OneToMany
+    private Set<Order> orderSet;
 
     public Customer(Long id, String registrationCode, String fullName, String email, String telephone) {
         this.id = id;
@@ -22,6 +25,14 @@ public class Customer {
     }
 
     public Customer() {
+    }
+
+    public Set<Order> getOrderSet() {
+        return orderSet;
+    }
+
+    public void setOrderSet(Set<Order> orderSet) {
+        this.orderSet = orderSet;
     }
 
     public Long getId() {
