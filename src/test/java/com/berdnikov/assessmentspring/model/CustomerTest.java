@@ -19,12 +19,4 @@ class CustomerTest {
 
         assertEquals(idValue, customer.getId());
     }
-
-    @Test
-    void getRegistrationCode() {
-    }
-
-    @Test
-    void getFullName() {
-    }
 }

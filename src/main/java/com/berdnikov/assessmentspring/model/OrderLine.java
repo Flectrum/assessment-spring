@@ -3,6 +3,7 @@ package com.berdnikov.assessmentspring.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "orderline")
 public class OrderLine {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)

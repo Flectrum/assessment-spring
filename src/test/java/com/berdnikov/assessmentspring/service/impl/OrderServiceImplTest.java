@@ -4,6 +4,7 @@ import com.berdnikov.assessmentspring.model.Order;
 import com.berdnikov.assessmentspring.repository.OrderRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
@@ -16,6 +17,7 @@ import static org.mockito.Mockito.when;
 
 class OrderServiceImplTest {
 
+    @InjectMocks
     OrderServiceImpl orderService;
 
     @Mock
@@ -29,8 +31,7 @@ class OrderServiceImplTest {
     }
 
     @Test
-    void createOrder() {
-    }
+    void createOrder() {}
 
     @Test
     void searchAllOrdersByDate() {
