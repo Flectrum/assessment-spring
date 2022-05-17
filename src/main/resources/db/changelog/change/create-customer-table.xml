@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+<changeSet id="1" author="Aleksandr">
+    <createTable tableName="customer">
+        <column name="customer_id" type="int">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+        <column name="registration_code" type="varchar(50)"/>
+        <column name="full_name" type="varchar(50)">
+        <constraints nullable="false"/>
+        </column>
+        <column name="email" type="varchar(50)"/>
+        <column name="telephone" type="varchar(30)"/>
+    </createTable>
+    <addAutoIncrement tableName="customer" columnName="customer_id" columnDataType="int" startWith="1" incrementBy="1" />
+</changeSet>
+</databaseChangeLog>

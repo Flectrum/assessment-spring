@@ -14,6 +14,7 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @OneToMany
+    @Column(name = "order_line_id")
     private Set<OrderLine> orderLine = new HashSet<>();
     @Timestamp
     private Date date;

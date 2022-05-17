@@ -9,7 +9,9 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
+    @Column(name = "sku_code")
     private String skuCode;
+    @Column(name = "unit_price")
     private double unitPrice;
 
     public Product(long id, String name, String skuCode, double unitPrice) {

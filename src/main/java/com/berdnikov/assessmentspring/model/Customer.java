@@ -9,12 +9,12 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(name = "registration_code")
     private String registrationCode;
+    @Column(name = "full_name")
     private String fullName;
     private String email;
     private String telephone;
-    @OneToMany
-    private Set<Order> orderSet;
 
     public Customer(Long id, String registrationCode, String fullName, String email, String telephone) {
         this.id = id;
@@ -27,13 +27,6 @@ public class Customer {
     public Customer() {
     }
 
-    public Set<Order> getOrderSet() {
-        return orderSet;
-    }
-
-    public void setOrderSet(Set<Order> orderSet) {
-        this.orderSet = orderSet;
-    }
 
     public Long getId() {
         return id;
