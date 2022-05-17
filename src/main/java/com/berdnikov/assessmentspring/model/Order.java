@@ -11,7 +11,7 @@ import java.util.Set;
 @Table(name = "order_")
 public class Order {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @OneToMany
     @Column(name = "order_line_id")
